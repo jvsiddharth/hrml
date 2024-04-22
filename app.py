@@ -97,6 +97,3 @@ def performance_graph():
         # Handle other exceptions
         return str(e)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
