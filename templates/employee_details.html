@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .employee-details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .detail-label {
+            font-weight: bold;
+        }
+        .back-link {
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    
+    <div class="employee-details">
+        <p><span class="detail-label">Name:</span> {{ employee.Name }}</p>
+        <p><span class="detail-label">Employee ID:</span> {{ employee.Employee_ID }}</p>
+        <p><span class="detail-label">Department:</span> {{ employee.Department }}</p>
+        <p><span class="detail-label">Punctuality Score:</span> {{ employee.Punctuality }}</p>
+        <p><span class="detail-label">Attendance Score:</span> {{ employee.Attendance }}</p>
+        <p><span class="detail-label">Initiative Score:</span> {{ employee.Initiative }}</p>
+        <p><span class="detail-label">Communication Score:</span> {{ employee.Communication }}</p>
+        <p><span class="detail-label">Performance Score:</span> {{ employee.Performance_Score }}</p>
+        <p><span class="detail-label">Promotion Probability:</span> {{ employee.Promotion_Probability }}</p>
+        <p><span class="detail-label">Firing Probability:</span> {{ employee.Firing_Probability }}</p>
+        <p><span class="detail-label">Leaving Probability:</span> {{ employee.Leaving_Probability }}</p>
+    </div>
+
+    <a href="/" class="back-link">Back to Employee List</a>
+</body>
+</html>

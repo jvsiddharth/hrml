@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Performance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Performance Graph</h1>
+        <div class="performance-graph-container">
+            {{ performance_graph_html | safe }}
+        </div>
+    <div class="container">
+        <h1>{{ employee_details.Name }} - Employee Details</h1>
+        <div class="employee-details">
+            <p><strong>Employee ID:</strong> {{ employee_details.Employee_ID }}</p>
+            <p><strong>Average Performance Score:</strong> {{ employee_details.Avg_Performance_Score }}</p>
+            <p><strong>Average Promotion Probability:</strong> {{ employee_details.Avg_Promotion_Probability }}</p>
+            <p><strong>Average Firing Probability:</strong> {{ employee_details.Avg_Firing_Probability }}</p>
+            <p><strong>Average Leaving Probability:</strong> {{ employee_details.Avg_Leaving_Probability }}</p>
+        </div>
+    
+    </div>
+</body>
+</html>
