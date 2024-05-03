@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Engagement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ employee_details.Name }} - Employee Details</h1>
+        <div class="employee-details">
+            <p><strong>Employee ID:</strong> {{ employee_details.Employee_ID }}</p>
+            <p><strong>Average Employee Engagement:</strong> {{ employee_details.Avg_Employee_Engagement }}</p>
+        </div>
+    </div>
+    <h1>Monthly Employee Engagement</h1>
+    <div class="performance-graph-container">
+        <div id="engagement-graph"></div>
+    </div>
+    <script>
+        // Extract engagement data from Flask variable
+        var engagementData = {{ engagement_graph_html | safe }};
+        
+        // Display the engagement graph using Plotly.js
+        Plotly.newPlot('engagement-graph', engagementData);
+    </script>
+</body>
+</html>

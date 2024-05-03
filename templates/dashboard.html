@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+</head>
+<body>
+    <h1>Employee Dashboard</h1>
+    <h2>{{ employee_details.Name }} (ID: {{ employee_details.Employee_ID }})</h2>
+    
+    <h3>Average Employee Engagement: {{ employee_details.Avg_Employee_Engagement }}</h3>
+
+    <div>
+        <h3>Monthly Employee Engagement</h3>
+        {{ engagement_graph_html | safe }}
+    </div>
+
+    <div>
+        <h3>Monthly Performance and Probabilities</h3>
+        {{ performance_graph_html | safe }}
+        <p>Average Performance Shift: {{ employee_details.Avg_Performance_Shift }}</p>
+        <p>Average Promotion Probability: {{ employee_details.Avg_Promotion_Probability }}</p>
+        <p>Average Firing Probability: {{ employee_details.Avg_Firing_Probability }}</p>
+        <p>Average Leaving Probability: {{ employee_details.Avg_Leaving_Probability }}</p>
+    </div>
+</body>
+</html>

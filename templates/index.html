@@ -92,7 +92,7 @@
                 <select id="employee-select" name="employee_id">
                     <option value="" selected disabled>Select an employee</option>
                     {% for employee in employees %}
-                        <option value="{{ loop.index0 }}">{{ employee['Name'] }}</option>
+                        <option value="{{ employee['Employee_ID'] }}">{{ employee['Name'] }}</option>
                     {% endfor %}
                 </select>
             </div>
